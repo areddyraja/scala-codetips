@@ -1,26 +1,8 @@
+package sprayexamples
+
 
 import spray.json._
 import spray.json.DefaultJsonProtocol._
-
-sealed trait MyTrait
-
-case class Color(name: String, red: Int, green: Int, blue: Int)
-//in case of implicit color object
-//object Color
-
-object MyJsonProtocol extends DefaultJsonProtocol {
-  //incase implicit color object is defined
-  //implicit val colorFormat = jsonFormat4(Color.apply)
-  implicit val colorFormat = jsonFormat4(Color)
-}
-
-case class Class1(someField: String) extends MyTrait
-
-case class Class2(someOtherField: Int) extends MyTrait
-
-case class Class3(yetAnotherField: String) extends MyTrait
-
-case class TestCase(works: Boolean, myClassWithTrait: MyTrait)
 
 //object ImplicitConversions extends DefaultJsonProtocol {
 //  implicit val c1Conv = jsonFormat1(Class1)
@@ -52,6 +34,26 @@ case class TestCase(works: Boolean, myClassWithTrait: MyTrait)
 //}
 
 import spray.json._
+
+sealed trait MyTrait
+
+case class Color(name: String, red: Int, green: Int, blue: Int)
+//in case of implicit color object
+//object Color
+
+object MyJsonProtocol extends DefaultJsonProtocol {
+  //incase implicit color object is defined
+  //implicit val colorFormat = jsonFormat4(Color.apply)
+  implicit val colorFormat = jsonFormat4(Color)
+}
+
+case class Class1(someField: String) extends MyTrait
+
+case class Class2(someOtherField: Int) extends MyTrait
+
+case class Class3(yetAnotherField: String) extends MyTrait
+
+case class TestCase(works: Boolean, myClassWithTrait: MyTrait)
 
 object Colors {
 
