@@ -1,6 +1,6 @@
 package com.akrantha.generics
 
-object MixinExample extends App {
+object MixinExample extends scala.App {
   class Iter extends StringIterator("sdsdsd") with RichIterator
   val iter = new Iter
   iter foreach println

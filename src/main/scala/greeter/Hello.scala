@@ -97,7 +97,7 @@ object Hello extends App {
   val feeds = feeds1 ++ feeds2
   println("blogspot feeds: " + blogSpotFeeds.mkString(", "))
 
-  val commonFeeds = feeds1 ** feeds2
+  val commonFeeds = feeds1 ++ feeds2
   println("common feeds: " + commonFeeds.mkString(", "))
 
   val urls = feeds1 map ("http://" + _)

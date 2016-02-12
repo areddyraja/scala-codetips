@@ -1,6 +1,6 @@
 package com.akrantha.generics
 
-object ImplicitParameters extends App {
+object ImplicitParameters extends scala.App {
 
   implicit object StringMonoid extends Monoid[String] {
     def add(x: String, y: String): String = x concat y

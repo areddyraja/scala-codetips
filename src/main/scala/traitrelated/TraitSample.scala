@@ -53,11 +53,13 @@ class Hawk extends Bird with Swimming with Flying {
   val flyMessage = "I'm an excellent flyer"
 }
 
-class Frigatebird extends Bird {
+class Frigatebird extends Bird   with Flying {
   val flyMessage = "I'm an excellent flyer"
 }
 
-class Penguin extends Bird with Swimming
+class Penguin extends Bird with Swimming with Flying {
+    val flyMessage = "I'm an excellent flyer"
+}
 
 
 
