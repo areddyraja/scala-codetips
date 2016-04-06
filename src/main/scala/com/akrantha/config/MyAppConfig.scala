@@ -1,4 +1,4 @@
-package com.akantha.config
+package com.akrantha.config
 
 import java.io.File
 
