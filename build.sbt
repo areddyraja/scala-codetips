@@ -5,6 +5,10 @@ lazy val root = ( project in file(".") ).
     scalaVersion := "2.11.7"
   ) 
 
+  val akkaV       = "2.4.1"
+  val akkaStreamV = "2.0.1"
+  val scalaTestV  = "2.2.5"
+  
 // The sequence of library dependencies.
 libraryDependencies ++= Seq(
   "com.typesafe" % "config" % "1.3.0" withSources(),
@@ -24,7 +28,13 @@ libraryDependencies ++= Seq(
   "com.eaio.uuid" % "uuid" % "3.2" withSources(),
   "org.apache.httpcomponents" % "httpclient" % "4.5.1" withSources(),
   "org.scalatest" % "scalatest_2.11" % "3.0.0-M7" withSources(),
-  "net.jpountz.lz4" % "lz4" % "1.3.0" withSources()
+  "net.jpountz.lz4" % "lz4" % "1.3.0" withSources(),
+   "com.typesafe.akka" %% "akka-actor"                           % akkaV,
+   "com.typesafe.akka" %% "akka-stream-experimental"             % akkaStreamV,
+   "com.typesafe.akka" %% "akka-http-core-experimental"          % akkaStreamV,
+   "com.typesafe.akka" %% "akka-http-experimental"               % akkaStreamV,
+   "com.typesafe.akka" %% "akka-http-spray-json-experimental"    % akkaStreamV,
+   "com.typesafe.akka" %% "akka-http-testkit-experimental"       % akkaStreamV
   
 )
 
